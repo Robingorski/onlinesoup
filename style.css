@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+}
+
+nav {
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+}
+
+.burger {
+    display: none;
+    background-color: blue;
+    width: 3.5rem;
+}
+
+.burger div {
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: rgb(0, 0, 0);
+    margin: 0.5rem 2.5rem 0.5rem 0.5rem;
+    transition: all 0.4s ease;
+}
+
+.logo-container-test {}
+
+.logo-container {
+    background-color: red;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-o {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.logo-s {
+    text-decoration: none;
+    color: rgb(255, 191, 0);
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    margin-left: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navTags {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .nav-links {
+        margin-left: 33%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0px;
+        top: 10vh;
+        height: 90vh;
+        width: 100%;
+        margin-left: 0px;
+        background-color: rgb(253, 253, 253);
+        flex-direction: column;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        color: black;
+    }
+
+    .burger {
+        display: block;
+    }
+
+}
+
+.nav-active {
+    transform: translateX(-0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+}
+
+
+.burgertoggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.burgertoggle .line2 {
+    opacity: 0;
+}
+
+.burgertoggle .line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+}
