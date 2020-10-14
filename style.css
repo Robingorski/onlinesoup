@@ -1,3 +1,9 @@
+:root {
+    --main-background-color:  rgb(253, 253, 253);
+    --main-yellow: rgb(255, 191, 0);
+    --main-black: rgb(31, 31, 31);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +20,11 @@ html {
 }
 
 body {
-    background-color: rgb(253, 253, 253);
+    background-color: var(--main-background-color);
 }
 
 nav {
-    background-color: rgb(253, 253, 253);
+    background-color: var(--main-background-color);
     display: flex;
     align-items: center;
     height: 10vh;
@@ -29,57 +35,138 @@ nav {
 
 .burger {
     display: none;
-    background-color: blue;
     width: 3.5rem;
 }
 
 .burger div {
     width: 2.5rem;
     height: 0.2rem;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--main-black);
     margin: 0.5rem 2.5rem 0.5rem 0.5rem;
     transition: all 0.4s ease;
 }
 
-.logo-container-test {}
-
-.logo-container {
-    background-color: red;
-    width: 100vw;
+.logo-container-desktop {
+    width: 80vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.logo-container-mobile {
+    display: none;
 }
 
 .logo-o {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--main-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
 
 .logo-s {
     text-decoration: none;
-    color: rgb(255, 191, 0);
+    color: var(--main-yellow);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
-
-
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    width: 50%;
-    margin-left: 50%;
+    width: 80vw;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .navTags {
     text-decoration: none;
-    color: white;
+    color: var(--main-black);
 }
 
+.landing-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.food-hands_container {
+    height: 70vh;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 2px rgba(201,201,201,1);
+}
+
+input {
+    font-family: 'Oxygen', sans-serif;
+}
+
+button{
+    font-family: 'Oxygen', sans-serif;
+}
+
+input[type=text] {
+    border: 1px solid;
+    border-color: var(--main-yellow);
+    font-size: 1.4rem;
+    width: 22vw;
+    height: 4vh;
+}
+
+.find-soups {
+    color: var(--main-black);
+    background-color: var(--main-yellow);
+    border: none;
+    width: 22vw;
+    height: 4vh;
+    margin-top: 2rem;
+}
+
+.shared-happiness {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 3vh;
+}
+
+.warm-somebody{
+    width: 22vw;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 3vh;
+}
+
+.food-hands_container-img {
+    width: 7rem;
+}
+
+.soup-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 23vw;
+    height: 26vh;
+}
+
+.soup-container-mobile {
+    display: none;
+}
+
+.landing-soup {
+    width: 18rem;
+    height: 12rem;
+}
 
 @media only screen and (max-width: 1300px) {
     .nav-links {
@@ -88,8 +175,19 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
-    nav {
-        justify-content: space-between;
+    .burger {
+        display: block;
+    }
+    
+    .logo-container-desktop {
+        display: none;
+    }
+
+    .logo-container-mobile {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-links {
@@ -99,7 +197,7 @@ nav {
         height: 90vh;
         width: 100%;
         margin-left: 0px;
-        background-color: rgb(253, 253, 253);
+        background-color: var(--main-background-color);
         flex-direction: column;
         justify-content: space-evenly;
         transform: translateX(-100%);
@@ -108,13 +206,59 @@ nav {
 
     .nav-links li {
         opacity: 0;
-        color: black;
     }
 
-    .burger {
-        display: block;
+    .landing-page {
+        justify-content: unset;
+        align-items: unset;
     }
 
+    input[type=text] {
+        font-size: 1.4rem;
+        width: 70vw;
+        height: 4vh;
+    }
+
+    .find-soups {
+        width: 70vw;
+        height: 4vh;
+        margin-top: 2rem;
+        font-size: 1.7rem;
+    }
+
+    .food-hands_container {
+        box-shadow: none;
+        height: 40vh;
+        width: 100vw;
+        justify-content: flex-start;
+        margin-top: 15vh;
+    }
+
+    .food-hands_container-img {
+        width: 5rem;
+    }
+
+    .warm-somebody{
+        width: 70vw;
+    }
+
+    .soup-container-mobile {
+        height: 30vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .soup-container {
+        display: none;
+    }
+
+    .landing-soup {
+        width: 15rem;
+        height: 10rem;
+    }
 }
 
 .nav-active {

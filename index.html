@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Online Soppa</title>
 </head>
-
 <body>
 
     <nav>
@@ -17,7 +16,11 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
-        <div class="logo-container">
+        <div class="logo-container-desktop">
+            <a class="logo-o" href="/" alt="Online">Online</a>
+            <a class="logo-s" href="/" alt="Soppa">Soppa</a>
+        </div>
+        <div class="logo-container-mobile">
             <a class="logo-o" href="/" alt="Online">Online</a>
             <a class="logo-s" href="/" alt="Soppa">Soppa</a>
         </div>
@@ -48,11 +51,32 @@
                 </li>
             </a>
         </ul>
-
     </nav>
+    <section class="landing-page">
+    <div class="food-hands_container">
+        <input type="text"  id="address" placeholder="Ange leveransadress...">
+        <button class="find-soups" type="button" href="" >Hitta soppor</button>
+        <p class="shared-happiness">Delad glädje är dubbel glädje</p>
+        <img class="food-hands_container-img" src="./assets/Food-sharing.png" alt="sharing food">
+        <p class="warm-somebody">
+            Värm någons själ med en ljuvligt god soppa som boostar
+            kroppen och immunförsvaret!
+           Vi har soppor som är fyllda med nyttigheter till dig eller kanske en vän?
+        </p>
+        <div class="soup-container">
+            <img class="landing-soup" src="./assets/Soup-1.jpg" alt="">
+            <img class="landing-soup" src="./assets/Soup-2.jpg" alt="">
+            <img class="landing-soup" src="./assets/Soup-3.jpg" alt="">
+            <img class="landing-soup" src="./assets/Soup-4.jpg" alt="">
+        </div>
     </div>
-
-
+    <div class="soup-container-mobile">
+        <img class="landing-soup" src="./assets/Soup-1.jpg" alt="">
+        <img class="landing-soup" src="./assets/Soup-2.jpg" alt="">
+        <img class="landing-soup" src="./assets/Soup-3.jpg" alt="">
+        <img class="landing-soup" src="./assets/Soup-4.jpg" alt="">
+    </div>
+</section>
 
     <script src="app.js"></script>
 </body>
