@@ -92,12 +92,13 @@ nav {
 .meny-category {
     background-color: var(--main-yellow);
     height: 6vh;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-ul {
+.meny-category_ul {
 	display: flex;
 /* 	width: fit-content; 
     margin: 0 auto;  */
@@ -105,7 +106,7 @@ ul {
 	position: relative;
 	text-align: center;
 }
-ul li {
+.meny-category_ul .meny-category_li {
 	padding: 2rem;
 	/* letter-spacing: 1px; */
 	color: var(--main-black);
@@ -115,12 +116,14 @@ ul li {
     text-transform: uppercase;
     font-weight: 600;
 }
-ul li:hover {
+.meny-category_li:hover {
 	cursor: pointer;
 }
-.active {
+
+#active {
 	color: var(--main-black);
 }
+
 .underline {
 	position: absolute;
 	height: 0.3rem;
@@ -132,11 +135,45 @@ ul li:hover {
 	transition: 0.2s ease-in-out;
 }
 
+.meny-button {
+    border: none;
+    outline: none;
+}
 
-/* .meny-category_tag {
+#soup-protein {
+    background-color: var(--main-background-color);
+    height: 6vh;
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .soup-protein_ul {
+    background-color: var(--main-background-color);
+    height: 6vh;
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 } */
 
-
+.soup-protein-li {
+    border: none;
+    padding: 2px 14px;
+    background-color: var(--main-background-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.5s ease-in-out;
+    border-radius: 1rem;
+  }
+  
+  .active {
+    background-color: var(--main-yellow);
+    color: var(--main-black); 
+  }
 
 @media only screen and (max-width: 1300px) {
     .nav-links {
@@ -194,6 +231,10 @@ ul li:hover {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600;
+    }
+
+    .soup-1 {
+        width: 100vw;
     }
 }
 
