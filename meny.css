@@ -2,6 +2,8 @@
     --main-background-color:  rgb(253, 253, 253);
     --main-yellow: rgb(255, 191, 0);
     --main-black: rgb(31, 31, 31);
+    --main-green: rgb(76, 175, 80);
+    --main-grey: rgb(113, 109, 106);
 }
 
 * {
@@ -175,6 +177,68 @@ nav {
     color: var(--main-black); 
   }
 
+  .soup-information {
+    background-color: rgb(64, 64, 122);
+    /* background-color: var(--main-background-color); */
+    height: 30vh;
+}
+
+.soup-protein_container {
+    height: 3vh;
+    width: 93vw;
+    margin-left: 7vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.soup-protein {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--main-green);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.soup-name-and-price {
+    width: 86vw;
+    height: 3vh;
+    margin-left: 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soup-name {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.soup-price {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.sub-information{
+    width: 86vw;
+    height: 3vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 7vw;
+}
+
+
+.sub-soup-information{
+    font-size: 1.1rem;
+    color: var(--main-grey);
+}
+
+
+
+
 @media only screen and (max-width: 1300px) {
     .nav-links {
         margin-left: 33%;
@@ -236,6 +300,27 @@ nav {
     .soup-1 {
         width: 100vw;
     }
+/* 
+    .soup-information {
+        background-color: cadetblue;
+        height: 30vh;
+    }
+
+    .soup-protein_container {
+        height: 5vh;
+        width: 100vw;
+        background-color: var(--main-background-color);
+    }
+
+    .soup-protein {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: var(--main-green);
+    }
+ */
+
+
+
 }
 
 .nav-active {
