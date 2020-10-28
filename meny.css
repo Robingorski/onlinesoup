@@ -201,7 +201,6 @@ nav {
     letter-spacing: 0.1rem;
 }
 
-
 .checkmark {
     width: 56px;
     height: 56px;
@@ -251,7 +250,47 @@ nav {
       box-shadow: inset 0px 0px 0px 30px var(--main-green);
     }
   }
-
+  .hidden {
+      display: none;
+  }
+  .checked {
+    border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--main-yellow);
+    position: relative;
+  }
+  .circle {
+    border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--main-yellow);
+    position: relative;
+  }
+  .circle::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height: 0.2rem;
+    margin-top: -1px;
+    top: 50%;
+    left: 1.4rem;
+    right: 1.4rem;
+    /* z-index: 9; */
+  }
+  .circle::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 0.2rem;
+    margin-left: -1px;
+    left: 50%;
+    top: 1.4rem;
+    bottom: 1.4rem;
+    /* z-index: 9; */
+  }
 
 .soup-name-and-price {
     width: 86vw;
@@ -282,7 +321,6 @@ nav {
     align-items: flex-start;
     margin-left: 7vw;
 }
-
 
 .sub-soup-information {
     font-size: 1.2rem;
@@ -323,6 +361,19 @@ nav {
     height: 2vh;
     color: var(--main-black);
     background-color: var(--main-soup-tag);
+    border-radius: 0.5rem;
+}
+
+#active-soup-info_container {
+    display: none;
+}
+
+
+
+.active-soup-info_container {
+    height: 11vh;
+    transition: ease-in-out 0.5s;
+   /* funkar inte */
 }
 
 hr {
@@ -357,14 +408,7 @@ hr {
     transform: rotate(135deg);
 }
 
-.triangle_up {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-right: 0.2rem solid;
-    border-top: 0.2rem solid;
-    border-color: var(--main-grey);
-    transform: rotate(-45deg);
-}
+
 
 
 

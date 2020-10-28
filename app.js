@@ -27,29 +27,7 @@ const navSlide = () => {
 navSlide();
 
 
-/* // MENY-CATEGORIES
-const items = document.querySelectorAll('li');
-const underline = document.querySelector('.underline');
-
-// Set intial size of the bar
-underline.style.width = items[0].offsetWidth + 'px';
-
-for (let i = 0; i < items.length; i++) {
-	const li = items[i];
-
-	li.addEventListener('click', () => {
-		document.querySelector('.active').classList.remove('active');
-		li.classList.add('active');
-
-		// Move the bar dynamically
-		let sizeToMove = 0;
-		for (let j = 0; j < i; j++) {
-			sizeToMove += items[j].offsetWidth;
-		}
-		underline.style.left = sizeToMove + 'px';
-		underline.style.width = li.offsetWidth + 'px';
-	});
-} */
+// MENY-CATEGORIES
 
 var header = document.getElementById("soup-protein");
 var btns = header.getElementsByClassName("soup-protein-li");
@@ -59,4 +37,51 @@ for (var i = 0; i < btns.length; i++) {
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
   });
+}
+
+
+let circleButtons = document.querySelectorAll('.circle');
+if (circleButtons.length > 0) {
+    circleButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+        
+        let div = e.target.closest('div');
+        
+        div.classList.add('checked')
+        div.firstElementChild.classList.remove('hidden');
+        div.classList.remove('circle')
+        setTimeout(function () {
+            toggleBack(div)},2500);
+        })
+    })
+}
+
+function toggleBack (div) {
+    div.classList.remove('checked')
+    div.firstElementChild.classList.add('hidden');
+    div.classList.add('circle')
+}
+
+
+var pilen = document.getElementById('arrow_down');
+let rotated = false;
+pilen.style.cursor = 'pointer';
+
+
+pilen.onclick = function() {
+  var moreIngrediets = document.getElementById("active-soup-info_container");
+  if (moreIngrediets.style.display === "none") {
+    moreIngrediets.style.display = "block";
+  } else {
+    moreIngrediets.style.display = "none";
+  }
+  let div = document.getElementById('arrow_down'),
+        deg = rotated ? -45 : 135;
+
+    div.style.mozTransform    = 'rotate('+deg+'deg)'; 
+    div.style.msTransform     = 'rotate('+deg+'deg)'; 
+    div.style.oTransform      = 'rotate('+deg+'deg)'; 
+    div.style.transform       = 'rotate('+deg+'deg)'; 
+    
+    rotated = !rotated;
 }

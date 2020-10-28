@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,12 +68,15 @@
     <button class="soup-protein-li">Veganskt</button>
   </div>
   <div>
-      <img class="soup-1" src="./assets/Soup-1.jpg" alt="sopnamn">
+      <img class="soup-1" src="./assets/Soup-1.jpg" alt="soppnamn">
   </div>
   <div class="soup-information">
     <div class="soup-protein_container">
         <p class="soup-protein">Vegansk</p>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        
+        <div class="circle">
+            <svg class="hidden checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        </div>
     </div>
     <div class="soup-name-and-price">
         <p class="soup-name">Kryddig dumpling soppa</p>
@@ -91,13 +93,15 @@
             <p class="ingredients-soup_tags">paprika</p>
             <p class="ingredients-soup_tags">vitlök</p>
         </div>
+       
     </div>
+     <div id="active-soup-info_container" class="active-soup-info_container">
+            <p>nu skall denna text visas</p>
+        </div>
     <hr>
-    <div class="more-soup-info_container">
+    <div id="more-soup-info_container" class="more-soup-info_container">
         <p class="more-soup-info">mer information</p>
         <div id="arrow_down" class="triangle_down"></div>
-       <!--  <div id="arrow_up" class="triangle_up"></div> -->
-    
     </div>
 
 
