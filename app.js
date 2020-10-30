@@ -39,7 +39,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
+// add-icon plus the checkmark function
 let circleButtons = document.querySelectorAll('.circle');
 if (circleButtons.length > 0) {
     circleButtons.forEach(button => {
@@ -62,21 +62,20 @@ function toggleBack (div) {
     div.classList.add('circle')
 }
 
-
-var pilen = document.getElementById('arrow_down');
+// Arrow function
+var arrow = document.getElementById('arrow_down');
 let rotated = false;
-pilen.style.cursor = 'pointer';
+arrow.style.cursor = 'pointer';
 
-
-pilen.onclick = function() {
+arrow.onclick = function() {
   var moreIngrediets = document.getElementById("active-soup-info_container");
-  if (moreIngrediets.style.display === "none") {
-    moreIngrediets.style.display = "block";
-  } else {
+  if (moreIngrediets.style.display === "block") {
     moreIngrediets.style.display = "none";
+  } else {
+    moreIngrediets.style.display = "block";
   }
   let div = document.getElementById('arrow_down'),
-        deg = rotated ? -45 : 135;
+        deg = rotated ? 135 : -45;
 
     div.style.mozTransform    = 'rotate('+deg+'deg)'; 
     div.style.msTransform     = 'rotate('+deg+'deg)'; 

@@ -13,8 +13,13 @@
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-        </div>
+        </div>        
+
         <div class="logo-container-desktop">
+            <div class="account_shopping-desktop">
+                <img class="account_shopping-icons" src="./assets/account.svg" alt="konto">
+                <img class="account_shopping-icons" src="./assets/shopping_cart.svg" alt="kundvagn">
+            </div>
             <a class="logo-o" href="/" alt="Online">Online</a>
             <a class="logo-s" href="/" alt="Soppa">Soppa</a>
         </div>
@@ -22,13 +27,18 @@
             <a class="logo-o" href="/" alt="Online">Online</a>
             <a class="logo-s" href="/" alt="Soppa">Soppa</a>
         </div>
+
+        <div class="account_shopping_mobile">
+            <img class="account_shopping-icons" src="./assets/account.svg" alt="konto">
+            <img class="account_shopping-icons" src="./assets/shopping_cart.svg" alt="kundvagn">
+        </div>
         <ul class="nav-links">
-            <a class="navTags" href="">
+            <a class="navTags" href="./index.html">
                 <li>
                     Hem
                 </li>
             </a>
-            <a class="navTags" href="">
+            <a class="navTags" href="./meny.html">
                 <li>
                     Meny
                 </li>
@@ -67,19 +77,20 @@
     <button class="soup-protein-li">Fisk</button>
     <button class="soup-protein-li">Veganskt</button>
   </div>
-  <div>
-      <img class="soup-1" src="./assets/Soup-1.jpg" alt="soppnamn">
+  <section class="soup-section">
+  <div class="main-soup_pic_container">
+      <img class="main-soup_pic" src="./assets/Soup-1.jpg" alt="soppnamn">
   </div>
   <div class="soup-information">
     <div class="soup-protein_container">
-        <p class="soup-protein">Vegansk</p>
+        <p class="soup-protein_meat">kött</p>
         
         <div class="circle">
             <svg class="hidden checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
         </div>
     </div>
     <div class="soup-name-and-price">
-        <p class="soup-name">Kryddig dumpling soppa</p>
+        <p class="soup-name">het dumpling soppa</p>
         <p class="soup-price">149 kr</p>
     </div>
     <div class="sub-information">
@@ -88,24 +99,139 @@
     <div class="ingredients-container">
         <p class="ingredients">Ingredienser:</p>
         <div class="ingredients-soup">
-            <p class="ingredients-soup_tags">pumpa</p>
-            <p class="ingredients-soup_tags">morot</p>
-            <p class="ingredients-soup_tags">paprika</p>
+            <p class="ingredients-soup_tags">nötfärs</p>
+            <p class="ingredients-soup_tags">chili</p>
+            <p class="ingredients-soup_tags">lime</p>
             <p class="ingredients-soup_tags">vitlök</p>
         </div>
        
     </div>
      <div id="active-soup-info_container" class="active-soup-info_container">
-            <p>nu skall denna text visas</p>
+         <div class="active-soup-info-pic_div">
+       <img class="active-soup-info-pictures" src="./assets/cow.svg" alt="cow-picture">
+       <img class="active-soup-info-pictures" src="./assets/chili.svg" alt="chili-picture">
+       <img class="active-soup-info-pictures" src="./assets/lime.svg" alt="lime-picture">
+       <img class="active-soup-info-pictures" src="./assets/garlic.svg" alt="garlic-picture">
         </div>
+        <div class="nutrition-soup_container">
+            <div class="nutrition-soup_tags">KCAL<p>1231 kcal</p></div> 
+            <div class="nutrition-soup_tags">FETT<p>7,1g</p></div>
+            <div class="nutrition-soup_tags">KOL<p>24,8g</p></div>
+            <div class="nutrition-soup_tags">PROT<p>29,9g</p></div> 
+        </div>
+    </div>
     <hr>
     <div id="more-soup-info_container" class="more-soup-info_container">
         <p class="more-soup-info">mer information</p>
         <div id="arrow_down" class="triangle_down"></div>
     </div>
-
-
   </div>
+</section>
+
+<section class="soup-section">
+    <div class="main-soup_pic_container">
+        <img class="main-soup_pic" src="./assets/Soup-5.jpg" alt="soppnamn">
+    </div>
+    <div class="soup-information">
+      <div class="soup-protein_container">
+          <p class="soup-protein_vegan">vegansk</p>
+          
+          <div class="circle">
+              <svg class="hidden checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+          </div>
+      </div>
+      <div class="soup-name-and-price">
+          <p class="soup-name">Kryddig tomatsoppa</p>
+          <p class="soup-price">149 kr</p>
+      </div>
+      <div class="sub-information">
+          <p class="sub-soup-information">med vegansgräddfil och pumpafrön</p>
+      </div>
+      <div class="ingredients-container">
+          <p class="ingredients">Ingredienser:</p>
+          <div class="ingredients-soup">
+              <p class="ingredients-soup_tags">tomat</p>
+              <p class="ingredients-soup_tags">morot</p>
+              <p class="ingredients-soup_tags">paprika</p>
+              <p class="ingredients-soup_tags">pumpafrön</p>
+          </div>
+         
+      </div>
+       <div id="active-soup-info_container" class="active-soup-info_container">
+           <div class="active-soup-info-pic_div">
+         <img class="active-soup-info-pictures" src="./assets/cow.svg" alt="cow-picture">
+         <img class="active-soup-info-pictures" src="./assets/chili.svg" alt="chili-picture">
+         <img class="active-soup-info-pictures" src="./assets/lime.svg" alt="lime-picture">
+         <img class="active-soup-info-pictures" src="./assets/garlic.svg" alt="garlic-picture">
+          </div>
+          <div class="nutrition-soup_container">
+              <div class="nutrition-soup_tags">KCAL<p>1231 kcal</p></div> 
+              <div class="nutrition-soup_tags">FETT<p>7,1g</p></div>
+              <div class="nutrition-soup_tags">KOL<p>24,8g</p></div>
+              <div class="nutrition-soup_tags">PROT<p>29,9g</p></div> 
+          </div>
+      </div>
+      <hr>
+      <div id="more-soup-info_container" class="more-soup-info_container">
+          <p class="more-soup-info">mer information</p>
+          <div id="arrow_down" class="triangle_down"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soup-section">
+    <div class="main-soup_pic_container">
+        <img class="main-soup_pic" src="./assets/Soup-3.jpg" alt="soppnamn">
+    </div>
+    <div class="soup-information">
+      <div class="soup-protein_container">
+          <p class="soup-protein_vegan">vegansk</p>
+          
+          <div class="circle">
+              <svg class="hidden checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+          </div>
+      </div>
+      <div class="soup-name-and-price">
+          <p class="soup-name">grön soppa inslag av curry</p>
+          <p class="soup-price">149 kr</p>
+      </div>
+      <div class="sub-information">
+          <p class="sub-soup-information">med broccoli, grönkål och avokado</p>
+      </div>
+      <div class="ingredients-container">
+          <p class="ingredients">Ingredienser:</p>
+          <div class="ingredients-soup">
+              <p class="ingredients-soup_tags">broccoli</p>
+              <p class="ingredients-soup_tags">avokado</p>
+              <p class="ingredients-soup_tags">grönkål</p>
+              <p class="ingredients-soup_tags">curry</p>
+          </div>
+         
+      </div>
+       <div id="active-soup-info_container" class="active-soup-info_container">
+           <div class="active-soup-info-pic_div">
+         <img class="active-soup-info-pictures" src="./assets/cow.svg" alt="cow-picture">
+         <img class="active-soup-info-pictures" src="./assets/chili.svg" alt="chili-picture">
+         <img class="active-soup-info-pictures" src="./assets/lime.svg" alt="lime-picture">
+         <img class="active-soup-info-pictures" src="./assets/garlic.svg" alt="garlic-picture">
+          </div>
+          <div class="nutrition-soup_container">
+              <div class="nutrition-soup_tags">KCAL<p>1231 kcal</p></div> 
+              <div class="nutrition-soup_tags">FETT<p>7,1g</p></div>
+              <div class="nutrition-soup_tags">KOL<p>24,8g</p></div>
+              <div class="nutrition-soup_tags">PROT<p>29,9g</p></div> 
+          </div>
+      </div>
+      <hr>
+      <div id="more-soup-info_container" class="more-soup-info_container">
+          <p class="more-soup-info">mer information</p>
+          <div id="arrow_down" class="triangle_down"></div>
+      </div>
+    </div>
+  </section>
+
+
+
     <script src="app.js"></script>
 </body>
 

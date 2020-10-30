@@ -3,8 +3,9 @@
     --main-yellow: rgb(255, 191, 0);
     --main-black: rgb(31, 31, 31);
     --main-green: rgb(76, 175, 80);
+    --main-red: rgb(175, 1, 1);
     --main-grey: rgb(113, 109, 106);
-    --main-soup-tag: rgb(246, 246, 246);
+    --main-soup-tag: rgb(246, 246, 246); 
 }
 
 * {
@@ -74,6 +75,20 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.4rem;
+}
+
+.account_shopping-desktop {
+    width: 10vw;
+    display: flex;
+}
+
+.account_shopping_mobile {
+    display: none;
+}
+
+.account_shopping-icons {
+    width: 2rem;
+    height: 2rem;
 }
 
 .nav-links {
@@ -153,16 +168,6 @@ nav {
     align-items: center;
 }
 
-/* .soup-protein_ul {
-    background-color: var(--main-background-color);
-    height: 6vh;
-    width: 100vw;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
-
 .soup-protein-li {
     border: none;
     padding: 2px 14px;
@@ -177,6 +182,20 @@ nav {
     background-color: var(--main-yellow);
     color: var(--main-black); 
   }
+
+  .soup-section {
+    height: 70vh;
+  }
+
+  .main-soup_pic_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-soup_pic {
+    width: 33vw;
+}
 
   .soup-information {
     /* background-color: rgb(64, 64, 122); */
@@ -193,10 +212,18 @@ nav {
     align-items: flex-end;
 }
 
-.soup-protein {
+.soup-protein_vegan {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--main-green);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.soup-protein_meat {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--main-red);
     font-weight: 600;
     letter-spacing: 0.1rem;
 }
@@ -331,7 +358,7 @@ nav {
     width: 86vw;
     height: 3vh;
     margin-left: 7vw;
-    margin-bottom: 3vh;
+    margin-bottom: 1.5vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -350,14 +377,14 @@ nav {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    width: 64vw;
+    width: 80vw;
 }
 
 .ingredients-soup_tags {
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
-    width: 15vw;
+    width: 6vw;
     height: 2vh;
     color: var(--main-black);
     background-color: var(--main-soup-tag);
@@ -368,12 +395,42 @@ nav {
     display: none;
 }
 
-
-
 .active-soup-info_container {
-    height: 11vh;
-    transition: ease-in-out 0.5s;
-   /* funkar inte */
+    height: 16vh;
+}
+
+.active-soup-info-pic_div {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 7vh;
+    margin-left: 7vw;
+}
+
+.active-soup-info-pictures {
+    width: 20vw;
+    height: 3vw;
+}
+
+.nutrition-soup_container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 86vw;
+    margin-left: 7vw;
+}
+
+.nutrition-soup_tags {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 6vw;
+    height: 6vh;
+    color: var(--main-black);
+    background-color: var(--main-soup-tag);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 hr {
@@ -390,6 +447,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .more-soup-info {
@@ -406,7 +464,16 @@ hr {
     border-top: 0.2rem solid;
     border-color: var(--main-grey);
     transform: rotate(135deg);
+    transition: transform 0.5s ease;
+    cursor: pointer;
 }
+
+/* 
+    transform: scaleY(0);
+    transform: scaleY(1);   
+    transform-origin: top;
+    transition: transform 0.5s ease;
+ */
 
 
 
@@ -417,6 +484,45 @@ hr {
     .nav-links {
         margin-left: 33%;
     }
+}
+
+@media only screen and (max-width: 1100px) {
+    .nav-links {
+        margin-left: 20%;
+    }
+
+    .soup-section {
+        height: 60vh;
+    }
+
+    .ingredients-soup_tags{
+        width: 8vw;
+      }
+
+    .active-soup-info-pictures {
+        width: 20vw;
+        height: 4vw;
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-links {
+        margin-left: 0%;
+    }
+
+    .soup-section {
+        height: 50vh;
+    }
+
+    .ingredients-soup_tags{
+        width: 10vw;
+      }
+    
+      .active-soup-info-pictures {
+        width: 20vw;
+        height: 5vw;
+    
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -471,30 +577,28 @@ hr {
     font-weight: 600;
     }
 
-    .soup-1 {
+    .main-soup_pic {
         width: 100vw;
     }
-/* 
-    .soup-information {
-        background-color: cadetblue;
-        height: 30vh;
-    }
 
-    .soup-protein_container {
-        height: 5vh;
-        width: 100vw;
-        background-color: var(--main-background-color);
-    }
+    .soup-section {
+        height: 70vh;
+      }
 
-    .soup-protein {
+      .ingredients-soup_tags{
         font-size: 1.2rem;
-        text-transform: uppercase;
-        color: var(--main-green);
+        width: 15vw;
+        height: 2vh;
+      }
+
+      .active-soup-info-pictures {
+        width: 15vw;
+        height: 10vw;
     }
- */
 
-
-
+    .nutrition-soup_tags {
+        width: 15vw;
+    }
 }
 
 .nav-active {
